@@ -5,7 +5,7 @@
 ### Compiling ###
 ---
 
-To compile, clone the repository and run `$ go build pwdshort`.
+To compile, clone the repository and run `$ go build pwdshort.go`.
 
 ---
 ### Bash Usage ###
