@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-  //number of path parts to display at the front of the output
+	//number of path parts to display at the front of the output
 	var maxDisplayedPartsPrefix = 2
-  //number of path parts to display at the end of the output	
-	var maxDisplayedPartsSuffix = 2
-	
+	//number of path parts to display at the end of the output
+	var maxDisplayedPartsSuffix = 1
+
 	dst := string(os.Getenv("PWD"))
 
 	var sa []string
@@ -30,9 +30,9 @@ func main() {
 			bSkipNext = false
 			continue
 		}
-		
+
 		if len(value) > 0 {
-		  //custom path-part replacements
+			//custom path-part replacements
 			switch value {
 			case "home":
 				//make sure it's the /home directory
@@ -40,7 +40,7 @@ func main() {
 					replacement = "~"
 					bInHomeDir = true
 					bSkipNext = true
-				} 
+				}
 			case "Development":
 				replacement = "Dev"
 			case "projects":
@@ -49,24 +49,24 @@ func main() {
 				replacement = value
 			}
 			value := replacement
-			
+
 			displayedParts++
-			
+
 			if displayedParts > maxDisplayedPartsPrefix && i < totalParts-maxDisplayedPartsSuffix {
 				if !displayedElipsis {
 					newPathStrs = append(newPathStrs, "...")
 					displayedElipsis = true
 				}
 			} else {
-		      newPathStrs = append(newPathStrs, value)
+				newPathStrs = append(newPathStrs, value)
 			}
 		}
 	}
 
 	sPrefixSlash := "/"
 	if bInHomeDir {
-	  sPrefixSlash = ""
+		sPrefixSlash = ""
 	}
-	
+
 	fmt.Printf("%s%s", sPrefixSlash, strings.TrimSpace(strings.Join(newPathStrs, "/")))
 }
