@@ -1,5 +1,14 @@
 # Created by https://www.gitignore.io
-# https://www.gitignore.io/api/go,linux,eclipse
+
+### Linux ###
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
 
 ### Go ###
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
@@ -26,17 +35,6 @@ _testmain.go
 *.exe
 *.test
 *.prof
-
-
-### Linux ###
-*~
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
 
 ### Eclipse ###
 *.pydevproject
@@ -75,3 +73,7 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+
+### Custom ###
+
+pwdshort

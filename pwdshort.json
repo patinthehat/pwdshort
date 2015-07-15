@@ -1,4 +1,14 @@
 {
-    "Users": ["UserA","UserB"],
-    "Groups": ["GroupA"]
+    /* Max # of parts to display at the front and back of the path string */
+    "MaxDisplayedParts":{
+      "Prefix":1,
+      "Suffix":2
+    },
+    
+    /* Replace specified pathnames with specified replacement values */
+    "Replacements": [
+      { "Pathname": "Development",  "Replacement":"Dev" },
+      { "Pathname": "projects",     "Replacement":"prj" },
+      { "Pathname": "images",       "Replacement":"img" },
+    ]
 }
