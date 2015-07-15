@@ -8,6 +8,15 @@
 To compile, clone the repository and run `$ go build pwdshort.go`.
 
 ---
+### Configuration ###
+---
+Configuration for `pwdshort` is stored in `pwdshort.json`.
+Here you can modify how many path parts to display at the front and end of the abbreviated path.
+
+You can also specify pathname replacements, i.e. replace "projects" to "PRJ": `/home/user/projects` => `/home/user/PRJ`
+Pathname replacements are *only* to make the CWD more compact, it does NOT rename the pathname.
+
+---
 ### Bash Usage ###
 ---
 
